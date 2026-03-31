@@ -15,6 +15,15 @@ def list_tasks():
             print(f'{idx}. {task}')
 
 
+# NEW FEATURE: delete a task by index
+def delete_task(index):
+    if 0 < index <= len(tasks):
+        removed = tasks.pop(index - 1)
+        print(f'Task "{removed}" deleted.')
+    else:
+        print("Invalid task number.")
+
+
 if __name__ == "__main__":
     add_task("Finish Assignment")
     list_tasks()
